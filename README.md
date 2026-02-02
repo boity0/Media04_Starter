@@ -1,27 +1,23 @@
-# Media04 - Starter HTML/CSS/JS MVP
+# Media04 - Fashion Social Media Platform
 
 ## Overview
-This is a complete fashion-focused social media platform with **two versions**:
-- **Local Version**: Uses localStorage (no backend needed)
+This is a complete fashion-focused social media platform with **professional design**:
 - **Backend Version**: Uses Node.js server with JSON file database
+- **Clean Design**: Professional fashion boutique background, no emoji clutter
+- **Modern UI**: Dark theme with glassmorphism effects
 
 ## 🌟 Features
-- ✨ **Cute Design**: Pastel gradients, floating emojis, glassmorphism effects
 - 📸 **Stories**: 24-hour disappearing content
 - 🔍 **Discovery**: Search users, posts, hashtags
 - 👥 **Social**: Follow users, like posts, comments
 - 💾 **Save Posts**: Bookmark favorite content
 - 🤝 **Collaboration Hub**: Connect with brands and influencers
 - 📱 **Responsive**: Works on all devices
+- 🎨 **Professional Design**: Fashion boutique background with clean interface
 
 ## 🚀 Quick Start
 
-### Option 1: Local Version (No Backend)
-1. Open `index.html` in your browser
-2. Uses localStorage for data persistence
-3. Perfect for demos and testing
-
-### Option 2: Backend Version (Real Database)
+### Backend Version (Recommended)
 1. **Start Backend Server:**
    ```bash
    npm install
@@ -31,31 +27,31 @@ This is a complete fashion-focused social media platform with **two versions**:
 
 2. **Start Frontend Server:**
    ```bash
-   npx http-server -p 3000
+   npx http-server -p 3000 -c-1 --cors
    ```
    Frontend runs on http://localhost:3000
 
-3. **Access Backend Version:**
-   - Open http://localhost:3000/index-backend.html
+3. **Access the App:**
+   - Open http://localhost:3000
    - Data persists in JSON files in `./data/` folder
 
 ## 📁 File Structure
 
 ### Frontend Files
-- `index.html` - Local version login
-- `index-backend.html` - Backend version login
-- `feed.html` / `feed-backend.html` - Main feed
-- `create.html` / `create-backend.html` - Create posts
-- `stories.html` / `stories-backend.html` - Stories feature
-- `discover.html` / `discover-backend.html` - Search & discovery
-- `profile.html` / `profile-backend.html` - User profiles
+- `index.html` - Login page
+- `feed.html` - Main feed
+- `create.html` - Create posts
+- `stories.html` - Stories feature
+- `discover.html` - Search & discovery
+- `profile.html` - User profiles
 - `collaboration.html` - Brand partnerships
-- `style.css` - Cute styling with animations
-- `script.js` - Local version logic
-- `script-backend.js` - Backend version logic
+- `signup.html` - User registration
+- `style-new.css` - Professional styling with fashion background
+- `script.js` - Frontend logic
 
 ### Backend Files
 - `server.js` - Express.js API server
+- `script-backend.js` - Backend integration logic
 - `package.json` - Dependencies
 - `data/` - JSON database files
   - `users.json` - User accounts
@@ -64,14 +60,14 @@ This is a complete fashion-focused social media platform with **two versions**:
   - `follows.json` - Following relationships
 
 ## 🎨 Design Features
-- **Animated gradients** that shift through pastel colors
-- **Floating emoji elements** across all pages
+- **Fashion boutique background** from Unsplash
+- **Professional dark theme** with white text
 - **Glassmorphism cards** with backdrop blur
-- **Cute interactions** with hover effects and animations
-- **Comic Sans MS font** for extra cuteness
+- **Clean interactions** with smooth hover effects
+- **No emoji clutter** - professional appearance
 - **Responsive design** for mobile and desktop
 
-## 🔧 API Endpoints (Backend Version)
+## 🔧 API Endpoints
 
 ### Authentication
 - `POST /api/auth/signup` - Create account
@@ -100,31 +96,24 @@ This is a complete fashion-focused social media platform with **two versions**:
 ### Search
 - `GET /api/search?q=query&type=all` - Search content
 
-## 💡 Demo Tips
-- **Local Version**: Click "Explore (Demo)" to browse without signing up
-- **Backend Version**: Create an account to test full functionality
-- **Image Upload**: Choose fashion photos, they'll be compressed automatically
-- **Stories**: Upload images that disappear after 24 hours
-- **Search**: Try searching for users, posts, or hashtags
-- **Mobile**: Works great on phones and tablets
+## 💡 Usage Tips
+- Click "Explore (Demo)" to browse without signing up
+- Create an account to test full functionality
+- Upload fashion photos for posts and stories
+- Use the collaboration hub to connect with brands
+- Search for users, posts, or hashtags in the discover section
 
-## 🛠️ Development
-- **Frontend**: Pure HTML/CSS/JavaScript
-- **Backend**: Node.js + Express
+## 🛠️ Technology Stack
+- **Frontend**: HTML5, CSS3, Vanilla JavaScript
+- **Backend**: Node.js + Express.js
 - **Database**: JSON files (easily replaceable with MongoDB/PostgreSQL)
-- **Storage**: Base64 encoded images (for simplicity)
-
-## 🌈 Customization
-- Modify `style.css` for different color schemes
-- Update emoji sets in floating elements
-- Add new API endpoints in `server.js`
-- Extend functionality in `script-backend.js`
+- **Styling**: Custom CSS with fashion background and glassmorphism
+- **Image Handling**: Base64 encoding for simplicity
 
 ## 📱 Mobile Support
 - Touch-friendly interface
 - Responsive navigation
-- Optimized image handling
-- Fast loading on mobile networks
+- Optimized for mobile devices
+- Fast loading with efficient caching
 
-Perfect for fashion influencers, social media demos, and learning full-stack development! 🦄✨
-
+Perfect for fashion influencers, social media platforms, and modern web development! ✨
