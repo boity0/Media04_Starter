@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Media04 - Create Post (Backend Version)</title>
+  <link rel="stylesheet" href="style-new.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <h2 class="brand small">Media04</h2>
+      <nav>
+        <a href="feed-backend.html">Feed</a>
+        <a href="stories-backend.html">Stories</a>
+        <a href="discover-backend.html">Discover</a>
+        <a href="create-backend.html">Create</a>
+        <a href="profile-backend.html">Profile</a>
+        <a id="logoutLink2" href="#">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <div class="card">
+      <h3>Create a Fashion Post ✨</h3>
+      
+      <div class="form-group">
+        <label for="postImage" class="btn" style="display: block; text-align: center; cursor: pointer;">
+          📸 Choose Fashion Photo ✨
+        </label>
+        <input id="postImage" type="file" accept="image/*" style="display: none;" />
+        <p class="small text-center">Supported: JPEG, PNG, GIF • Max 5MB 💖</p>
+      </div>
+      
+      <div id="previewArea" class="preview-area">
+        <p class="small text-center" style="color: #ff6b9d; padding: 2rem;">
+          Your fabulous image will appear here after selection 🌟
+        </p>
+      </div>
+      
+      <div class="form-group">
+        <label>Caption ✍️</label>
+        <input id="postCaption" placeholder="What's inspiring your fashion today? 💫" />
+      </div>
+      
+      <div class="form-group">
+        <label>Tags (optional) 🏷️</label>
+        <input id="postTags" placeholder="streetwear, summer, casual (comma separated) 🌈" />
+      </div>
+      
+      <button id="publishBtn" class="btn" type="button">Publish Post 🚀</button>
+    </div>
+  </main>
+
+  <script src="script-backend.js"></script>
+</body>
+</html>

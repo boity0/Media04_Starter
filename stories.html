@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Media04 - Stories</title>
+  <link rel="stylesheet" href="style-new.css?v=4">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <h2 class="brand small">Media04</h2>
+      <nav>
+        <a href="feed.html">Feed</a>
+        <a href="stories.html">Stories</a>
+        <a href="create.html">Create</a>
+        <a href="profile.html">Profile</a>
+        <a href="collaboration.html">Collaborate</a>
+        <a id="logoutLink" href="#">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <!-- Create Story Section -->
+    <div class="card">
+      <h3>📸 Share Your Style Story</h3>
+      <div class="story-create">
+        <input type="file" id="storyImage" accept="image/*" style="display: none;">
+        <label for="storyImage" class="btn story-upload-btn">
+          📷 Add to Your Story
+        </label>
+        <div id="storyPreview" class="story-preview"></div>
+        <input id="storyCaption" placeholder="What's your style story today?" maxlength="100">
+        <button id="publishStoryBtn" class="btn" style="display: none;">Publish Story</button>
+      </div>
+    </div>
+
+    <!-- Stories Feed -->
+    <div class="card">
+      <h3>✨ Recent Stories</h3>
+      <div id="storiesContainer" class="stories-container">
+        <!-- Stories will be loaded here -->
+      </div>
+    </div>
+
+    <!-- Story Viewer Modal -->
+    <div id="storyModal" class="story-modal">
+      <div class="story-viewer">
+        <button class="story-close" onclick="closeStoryViewer()">&times;</button>
+        <div class="story-progress">
+          <div class="story-progress-bar"></div>
+        </div>
+        <div class="story-content">
+          <div class="story-header">
+            <div class="story-avatar"></div>
+            <div class="story-info">
+              <strong class="story-author"></strong>
+              <span class="story-time"></span>
+            </div>
+          </div>
+          <img class="story-image" alt="Story">
+          <p class="story-caption"></p>
+        </div>
+        <div class="story-navigation">
+          <button class="story-prev" onclick="previousStory()">‹</button>
+          <button class="story-next" onclick="nextStory()">›</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

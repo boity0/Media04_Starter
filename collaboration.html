@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Media04 - Collaboration Hub</title>
+  <link rel="stylesheet" href="style-new.css?v=4">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <h2 class="brand small">Media04</h2>
+      <nav>
+        <a href="feed.html">Feed</a>
+        <a href="stories.html">Stories</a>
+        <a href="discover.html">Discover</a>
+        <a href="create.html">Create</a>
+        <a href="collaboration.html">Collaborate</a>
+        <a href="profile.html">Profile</a>
+        <a id="logoutLink4" href="#">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <!-- Collaboration Header -->
+    <div class="card text-center">
+      <h1>Brand Collaboration Hub</h1>
+      <p class="lead">Connect with fashion influencers, brands, and creators</p>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>245</h3>
+        <p>Active Influencers</p>
+      </div>
+      <div class="stat-card">
+        <h3>89</h3>
+        <p>Brand Partners</p>
+      </div>
+      <div class="stat-card">
+        <h3>156</h3>
+        <p>Active Collaborations</p>
+      </div>
+    </div>
+
+    <!-- Collaboration Marketplace -->
+    <div class="card">
+      <div class="section-header">
+        <h2>Find Collaborations</h2>
+        <p>Discover partnership opportunities</p>
+      </div>
+
+      <div class="marketplace-filters">
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+          <option value="sponsored">Sponsored Posts</option>
+          <option value="gifting">Product Gifting</option>
+          <option value="event">Event Appearance</option>
+          <option value="campaign">Brand Campaign</option>
+        </select>
+        
+        <select id="budgetFilter">
+          <option value="">Any Budget</option>
+          <option value="micro">Micro ($50-$200)</option>
+          <option value="small">Small ($200-$500)</option>
+          <option value="medium">Medium ($500-$2,000)</option>
+          <option value="large">Large ($2,000+)</option>
+        </select>
+
+        <select id="platformFilter">
+          <option value="">All Platforms</option>
+          <option value="instagram">Instagram</option>
+          <option value="tiktok">TikTok</option>
+          <option value="youtube">YouTube</option>
+          <option value="multiple">Multiple Platforms</option>
+        </select>
+      </div>
+
+      <div id="collaborationList" class="collaboration-list">
+        <!-- Collaborations will be loaded here -->
+      </div>
+    </div>
+
+    <!-- Influencer Directory -->
+    <div class="card">
+      <div class="section-header">
+        <h2>Top Influencers</h2>
+        <p>Connect with fashion creators</p>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" id="influencerSearch" placeholder="Search influencers by niche, location, or platform...">
+        <button onclick="searchInfluencers()" class="btn">Search</button>
+      </div>
+
+      <div class="influencer-filters">
+        <select id="nicheFilter">
+          <option value="">All Niches</option>
+          <option value="streetwear">Streetwear</option>
+          <option value="luxury">Luxury Fashion</option>
+          <option value="sustainable">Sustainable Fashion</option>
+          <option value="beauty">Beauty & Makeup</option>
+          <option value="lifestyle">Lifestyle</option>
+        </select>
+
+        <select id="followersFilter">
+          <option value="">All Followers</option>
+          <option value="nano">Nano (1K-10K)</option>
+          <option value="micro">Micro (10K-50K)</option>
+          <option value="mid">Mid-tier (50K-100K)</option>
+          <option value="macro">Macro (100K-500K)</option>
+          <option value="mega">Mega (500K+)</option>
+        </select>
+
+        <select id="engagementFilter">
+          <option value="">Any Engagement</option>
+          <option value="high">High (5%+)</option>
+          <option value="medium">Medium (2-5%)</option>
+          <option value="low">Low (Below 2%)</option>
+        </select>
+      </div>
+
+      <div id="influencersList" class="influencers-grid">
+        <!-- Influencers will be loaded here -->
+      </div>
+    </div>
+
+    <!-- Brand Directory -->
+    <div class="card">
+      <div class="section-header">
+        <h2>Brand Partners</h2>
+        <p>Discover brands looking for collaborations</p>
+      </div>
+
+      <div id="brandsList" class="brands-grid">
+        <!-- Brands will be loaded here -->
+      </div>
+    </div>
+
+    <!-- Collaboration Request Form -->
+    <div class="card">
+      <div class="section-header">
+        <h2>Send Collaboration Request</h2>
+        <p>Start a new partnership</p>
+      </div>
+
+      <div class="collaboration-form">
+        <div class="form-group">
+          <label for="collabType">Collaboration Type</label>
+          <select id="collabType">
+            <option value="">Select Collaboration Type</option>
+            <option value="sponsored_post">Sponsored Post</option>
+            <option value="product_review">Product Review</option>
+            <option value="brand_ambassador">Brand Ambassador</option>
+            <option value="event_coverage">Event Coverage</option>
+            <option value="content_creation">Content Creation</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="collabTitle">Title</label>
+          <input type="text" id="collabTitle" placeholder="Collaboration Title">
+        </div>
+        
+        <div class="form-group">
+          <label for="collabDescription">Description</label>
+          <textarea id="collabDescription" placeholder="Describe the collaboration opportunity..."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="collabBudget">Budget (optional)</label>
+          <input type="text" id="collabBudget" placeholder="Budget">
+        </div>
+        
+        <div class="form-group">
+          <label for="collabDeadline">Deadline (optional)</label>
+          <input type="text" id="collabDeadline" placeholder="Deadline">
+        </div>
+
+        <button onclick="sendCollaborationRequest()" class="btn">Send Collaboration Request</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

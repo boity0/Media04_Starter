@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Media04 - Feed (Backend Version)</title>
+  <link rel="stylesheet" href="style-new.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <h2 class="brand small">Media04</h2>
+      <nav>
+        <a href="feed-backend.html">Feed</a>
+        <a href="stories-backend.html">Stories</a>
+        <a href="discover-backend.html">Discover</a>
+        <a href="create-backend.html">Create</a>
+        <a href="profile-backend.html">Profile</a>
+        <a id="logoutLink" href="#">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <!-- Stories Preview -->
+    <div class="card stories-preview">
+      <h4>Stories ✨</h4>
+      <div id="storiesPreview" class="stories-preview-container">
+        <!-- Stories preview will be loaded here -->
+      </div>
+    </div>
+
+    <!-- Feed Content -->
+    <section id="feedContainer"></section>
+  </main>
+
+  <script src="script-backend.js"></script>
+</body>
+</html>

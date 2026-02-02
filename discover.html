@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Media04 - Discover</title>
+  <link rel="stylesheet" href="style-new.css?v=4">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <h2 class="brand small">Media04</h2>
+      <nav>
+        <a href="feed.html">Feed</a>
+        <a href="stories.html">Stories</a>
+        <a href="discover.html">Discover</a>
+        <a href="create.html">Create</a>
+        <a href="profile.html">Profile</a>
+        <a href="collaboration.html">Collaborate</a>
+        <a id="logoutLink" href="#">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <!-- Search Section -->
+    <div class="card">
+      <div class="search-section">
+        <input type="text" id="searchInput" placeholder="Search users, styles, or hashtags..." class="search-input">
+        <button onclick="performSearch()" class="btn search-btn">Search</button>
+      </div>
+      
+      <div class="search-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="users">Users</button>
+        <button class="filter-btn" data-filter="posts">Posts</button>
+        <button class="filter-btn" data-filter="hashtags">Hashtags</button>
+      </div>
+    </div>
+
+    <!-- Trending Section -->
+    <div class="card">
+      <h3>🔥 Trending Now</h3>
+      <div class="trending-tags">
+        <span class="trending-tag" onclick="searchTag('streetwear')">#streetwear</span>
+        <span class="trending-tag" onclick="searchTag('ootd')">#ootd</span>
+        <span class="trending-tag" onclick="searchTag('sustainable')">#sustainable</span>
+        <span class="trending-tag" onclick="searchTag('vintage')">#vintage</span>
+        <span class="trending-tag" onclick="searchTag('minimalist')">#minimalist</span>
+      </div>
+    </div>
+
+    <!-- Suggested Users -->
+    <div class="card">
+      <h3>👥 Suggested for You</h3>
+      <div id="suggestedUsers" class="suggested-users">
+        <!-- Suggested users will be loaded here -->
+      </div>
+    </div>
+
+    <!-- Search Results -->
+    <div id="searchResults" class="search-results" style="display: none;">
+      <div class="card">
+        <h3>Search Results</h3>
+        <div id="searchResultsContent"></div>
+      </div>
+    </div>
+
+    <!-- Saved Posts -->
+    <div class="card">
+      <h3>💾 Your Saved Posts</h3>
+      <div id="savedPosts" class="saved-posts-grid">
+        <!-- Saved posts will be loaded here -->
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

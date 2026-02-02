@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Media04 - Profile</title>
+  <link rel="stylesheet" href="style-new.css?v=4">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <h2 class="brand small">Media04</h2>
+      <nav>
+        <a href="feed.html">Feed</a>
+        <a href="stories.html">Stories</a>
+        <a href="discover.html">Discover</a>
+        <a href="create.html">Create</a>
+        <a href="profile.html">Profile</a>
+        <a href="collaboration.html">Collaborate</a>
+        <a id="logoutLink3" href="#">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <div class="card">
+      <div class="profile-header">
+        <img id="profilePic" class="profile-pic" alt="Profile" style="display:none;">
+        <h3>Edit Profile</h3>
+      </div>
+      
+      <div class="form-group">
+        <label for="profilePicFile">Profile Picture</label>
+        <input type="file" id="profilePicFile" accept="image/*" />
+      </div>
+      
+      <div class="form-group">
+        <label for="profileName">Full Name</label>
+        <input id="profileName" placeholder="Full name" />
+      </div>
+      
+      <div class="form-group">
+        <label for="profileBio">Bio</label>
+        <textarea id="profileBio" placeholder="Tell us about your style..."></textarea>
+      </div>
+      
+      <button id="saveProfile" class="btn" type="button">Save Profile</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
